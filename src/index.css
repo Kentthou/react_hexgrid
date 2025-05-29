@@ -30,8 +30,6 @@ a:hover {
 /* Body layout */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -64,32 +62,40 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Custom button styles for .btn-fill and .btn-outline */
 .btn-fill {
-  padding: 0.75rem 1.5rem;
   position: relative;
   overflow: hidden;
-  transition: color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: 1.5px solid rgb(99 102 241);
+  color: white;
+  background-color: transparent;
+  transition: color 0.4s ease;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .btn-fill::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgb(99 102 241); /* Indigo */
-  top: 100%;
-  left: 0;
-  z-index: -1;
-  transition: top 0.3s ease;
-}
-
-.btn-fill:hover::before {
   top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(99 102 241);
+  z-index: -1;
+  transition: width 0.4s ease;
 }
 
-.btn-fill:hover {
+.btn-fill:hover::before,
+.btn-fill:focus-visible::before {
+  width: 100%;
+}
+
+.btn-fill:hover,
+.btn-fill:focus-visible {
   color: white;
+  outline: none;
 }
 
 .btn-outline {
@@ -118,4 +124,57 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Animated shimmer for hero name */
+@keyframes shimmer {
+  0% {
+    background-position: -500px 0;
+  }
+
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #77f 20%,
+    #fff 40%,
+    #fff 100%
+  );
+  background-size: 1000px 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.5s infinite linear;
+}
+
+/* Navbar link underline animation */
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: rgb(99 102 241); /* Indigo */
+  transition: width 0.4s ease;
+}
+
+.nav-link:hover {
+  color: rgb(199 210 254); /* Indigo-200 */
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
