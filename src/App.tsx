@@ -121,7 +121,7 @@ function App() {
         </p>
         <div className="flex gap-4 flex-wrap justify-center">
           {['View Resume', 'Projects', 'Contact Me'].map((label) => (
-            <a key={label} href="#" className="btn-fill text-white border border-indigo-500">{label}</a>
+            <a key={label} href="#" className="btn-fill text-white border border-green-500">{label}</a>
           ))}
         </div>
       </main>
