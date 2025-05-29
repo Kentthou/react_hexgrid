@@ -11,7 +11,7 @@ function App() {
     if (!canvas || !ctx) return
 
     // Define constants to avoid repetition (DRY)
-    const HEX_SIZE = 20
+    const HEX_SIZE = 25
     const VISIBILITY_RADIUS = 100
     const OFFSET = 10
 
