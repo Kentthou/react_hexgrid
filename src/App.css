@@ -1,6 +1,6 @@
 #root {
-  max-width: none; /* Allow full-screen width */
+  max-width: none; 
   margin: 0;
-  padding: 0; /* Elements handle their own spacing */
+  padding: 0;
   text-align: center;
 }
