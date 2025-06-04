@@ -14,11 +14,11 @@ This is a personal project to help me get more comfortable with React. It's a si
 
 ## 🚀 UX/UI
 
-- ⚡ Neon-style responsive hexagon background animation.
+- 📼 vaporwave-style colors, with smoothened animations.
 - 🧭 Simple navigation menu with hover effects.
 - ✨ Shimmering title with gradient text.
 - 📱 Fully responsive layout with Tailwind CSS.
-- 🎯 Smooth animations tied to mouse position for an interactive feel.
+- 🎯 Slick animations for hexagons tied to mouse position for an interactive feel.
 
 ## 🛠️ Technologies
 
