@@ -3,7 +3,7 @@
 Made as a personal test project to help me get more comfortable with React. A simple landing page that features an animated, interactive **hexagon grid background** rendered on an HTML `<canvas>`. As the user moves the mouse, nearby hexagons subtly shift and glow — adds a dynamic and modern aesthetic and feel. 
 Tested mainly to work on PC.
 
-![screenshot](preview.png)
+![preview](hexgrid.gif)
 
 ## 🧠 What I Learned
 
